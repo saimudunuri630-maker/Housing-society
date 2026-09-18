@@ -1,5 +1,5 @@
 import React from 'react';
-import '../components_styles/stats.css';
+import '../components_styles/Orange.css';
 
 const statsData = [
   { value: '112', label: 'UNITS' },
