@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --fun-section-bg: #fff5eb;
+  --fun-title-color: #ea580c;
+  --fun-icon-color: #c43806;
+  --fun-body-text: #222222;
+  --fun-label-text: #1a1a1a;
+  --fun-font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Outer Section: Matching side padding with location section */
+.fun-section {
+  width: 100%;
+  background-color: var(--fun-section-bg);
+  padding: 2.2rem 2rem 4.5rem 2rem; /* Clean gap beneath the map */
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+/* Shared Alignment Container: Exactly 1140px */
+.fun-container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+/* Heading: Left edge aligned directly under the map card's left border */
+.fun-title {
+  color: var(--fun-title-color);
+  font-family: var(--fun-font);
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 1.2rem 0;
+  letter-spacing: -0.3px;
+  text-align: left;
+}
+
+/* Description: Spans the full 100% width of the container to match the right edge of the map */
+.fun-description {
+  width: 100%;
+  max-width: 100%;
+  color: var(--fun-body-text);
+  font-family: var(--fun-font);
+  font-size: 1.02rem;
+  line-height: 1.75;
+  font-weight: 400;
+  margin: 0 0 3.2rem 0;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* 3-Column Amenities Grid */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1.35fr 1fr;
+  row-gap: 2.8rem;
+  column-gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.amenity-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fun-icon-color);
+  flex-shrink: 0;
+}
+
+.amenity-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.amenity-label {
+  font-family: var(--fun-font);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--fun-label-text);
+  letter-spacing: -0.1px;
+  white-space: nowrap;
+}
+
+/* Responsive: Tablet Screens */
+@media (max-width: 880px) {
+  .fun-section {
+    padding: 1.8rem 1.5rem 3.5rem 1.5rem;
+  }
+
+  .fun-title {
+    font-size: 1.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .fun-description {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 2.4rem;
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+    column-gap: 1.5rem;
+  }
+
+  .amenity-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .amenity-label {
+    font-size: 0.98rem;
+  }
+}
+
+/* Responsive: Mobile Screens */
+@media (max-width: 540px) {
+  .fun-section {
+    padding: 1.4rem 1rem 2.5rem 1rem;
+  }
+
+  .fun-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .fun-description {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin-bottom: 1.8rem;
+  }
+
+  .amenities-grid {
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+  }
+
+  .amenity-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .amenity-label {
+    font-size: 0.95rem;
+  }
+}

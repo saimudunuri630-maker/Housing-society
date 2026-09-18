@@ -1,0 +1,67 @@
+:root {
+  --footer-bg: #ffe4c8;
+  --footer-border: #4d2315;
+  --footer-text-color: #ba3d10;
+}
+
+/* Footer Wrapper */
+.site-footer {
+  width: 100%;
+  background-color: var(--footer-bg);
+  border-top: 5px solid var(--footer-border);
+  box-sizing: border-box;
+}
+
+.footer-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1.4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Left Copyright Text */
+.footer-copyright {
+  margin: 0;
+  color: var(--footer-text-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Right Powered By Text */
+.footer-powered {
+  margin: 0;
+  color: var(--footer-text-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  letter-spacing: 0.2px;
+}
+
+.cfo-text {
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.2rem 1.2rem;
+    gap: 0.6rem;
+  }
+
+  .footer-copyright {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .footer-powered {
+    font-size: 0.95rem;
+  }
+}

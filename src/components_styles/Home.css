@@ -1,0 +1,73 @@
+:root {
+  --home-bg: #fff5eb; /* Same warm background tone */
+}
+
+/* Outer Section: Provides the exact top and bottom gap seen in Screenshot 1 */
+.home-section {
+  width: 100%;
+  background-color: var(--home-bg);
+  padding: 2.2rem 2rem 2.8rem 2rem; /* Clean vertical clearance from navbar and stats */
+  box-sizing: border-box;
+}
+
+/* Centered Container: Aligned with the rest of the website components */
+.home-container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Image Card: Rounded corners and subtle shadow frame matching original */
+.home-image-card {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image styling */
+.home-hero-img {
+  width: 100%;
+  height: auto;
+  max-height: 580px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Tablet Screens */
+@media (max-width: 880px) {
+  .home-section {
+    padding: 1.8rem 1.5rem 2.2rem 1.5rem;
+  }
+
+  .home-image-card {
+    border-radius: 14px;
+  }
+
+  .home-hero-img {
+    max-height: 440px;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 540px) {
+  .home-section {
+    padding: 1.4rem 1rem 1.8rem 1rem;
+  }
+
+  .home-image-card {
+    border-radius: 12px;
+  }
+
+  .home-hero-img {
+    max-height: 300px;
+  }
+}

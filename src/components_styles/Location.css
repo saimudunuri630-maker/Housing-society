@@ -1,0 +1,146 @@
+:root {
+  --loc-bg: #fff5eb;
+  --loc-title: #e04403;
+  --loc-sub: #3d3d3d;
+  --loc-border: #ebd7c5;
+}
+
+/* Outer Section */
+.location-section {
+  width: 100%;
+  background-color: var(--loc-bg);
+  padding: 2.5rem 2rem 0 2rem;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+
+/* Alignment Container: Exactly 1140px to match Fun section */
+.location-container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Heading */
+.location-title {
+  width: 100%;
+  color: var(--loc-title);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.2px;
+  text-align: center;
+}
+
+/* Subtitle */
+.location-subtitle {
+  width: 100%;
+  color: var(--loc-sub);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Map Card: Spans 100% of the 1140px container to align with text above & below */
+.map-card-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%; /* Fills exact boundary line */
+  height: 350px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  background-color: #2b2b2b;
+  border: 1px solid var(--loc-border);
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* "Open in Maps" Pill */
+.open-maps-pill {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ffffff;
+  color: #1a73e8;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 7px 11px;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 10;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.open-maps-pill:hover {
+  background-color: #f8f9fa;
+  color: #1558b0;
+}
+
+.open-icon {
+  stroke: #1a73e8;
+}
+
+.map-iframe-clean {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* Tablet Screens */
+@media (max-width: 880px) {
+  .location-section {
+    padding: 2rem 1.5rem 0 1.5rem;
+  }
+
+  .location-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .location-subtitle {
+    font-size: 0.88rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .map-card-wrapper {
+    height: 300px;
+    border-radius: 12px;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 540px) {
+  .location-section {
+    padding: 1.5rem 1rem 0 1rem;
+  }
+
+  .location-title {
+    font-size: 1.45rem;
+  }
+
+  .location-subtitle {
+    font-size: 0.82rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+
+  .map-card-wrapper {
+    height: 240px;
+    border-radius: 10px;
+  }
+}

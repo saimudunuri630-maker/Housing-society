@@ -1,0 +1,86 @@
+/* Stats Strip Outer Background */
+.stats-section {
+  width: 100%;
+  background-color: #c43806; /* Exact deep burnt orange brand color */
+  box-sizing: border-box;
+}
+
+/* Horizontal Aligning Container */
+.stats-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Individual Stat Block */
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  flex: 1;
+}
+
+/* Top Bold Value */
+.stat-value {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.1;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+
+/* Bottom Uppercase Sub-Label */
+.stat-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  margin-top: 6px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0.95;
+}
+
+/* Responsive: Tablet Screens */
+@media (max-width: 900px) {
+  .stats-container {
+    padding: 1.5rem 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem 1rem;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* Responsive: Mobile Screens */
+@media (max-width: 540px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 0.75rem;
+    padding: 1.3rem 1rem;
+  }
+
+  .stat-value {
+    font-size: 1.35rem;
+  }
+
+  .stat-label {
+    font-size: 0.72rem;
+  }
+}

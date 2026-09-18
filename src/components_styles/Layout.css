@@ -1,0 +1,165 @@
+:root {
+  --layout-bg: #fff5eb;
+  --title-orange: #e04403;
+  --tab-active-bg: #c43806;
+  --tab-inactive-text: #1a1a1a;
+  --card-border: #eee2d7;
+}
+
+/* Outer Section */
+.layout-section {
+  width: 100%;
+  background-color: var(--layout-bg);
+  padding: 2.8rem 2rem 4rem 2rem;
+  box-sizing: border-box;
+}
+
+/* Central Alignment Container */
+.layout-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Main Section Heading */
+.layout-title {
+  color: var(--title-orange);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.3px;
+  text-align: left;
+}
+
+/* Navigation Tabs */
+.layout-tabs {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--tab-inactive-text);
+  padding: 0.65rem 1.65rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.tab-btn:hover:not(.active) {
+  color: var(--title-orange);
+}
+
+.tab-btn.active {
+  background-color: var(--tab-active-bg);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(196, 56, 6, 0.25);
+}
+
+/* Blueprint Card Frame */
+.layout-card {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--card-border);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  min-height: 480px;
+}
+
+/* Content Viewport */
+.blueprint-viewport {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blueprint-img {
+  width: 100%;
+  height: auto;
+  max-height: 720px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Tablet Screens */
+@media (max-width: 880px) {
+  .layout-section {
+    padding: 2.2rem 1.5rem 3rem 1.5rem;
+  }
+
+  .layout-title {
+    font-size: 1.85rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .layout-tabs {
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tab-btn {
+    font-size: 0.95rem;
+    padding: 0.55rem 1.2rem;
+  }
+
+  .layout-card {
+    padding: 1rem;
+    border-radius: 12px;
+    min-height: 380px;
+  }
+
+  .blueprint-img {
+    max-height: 560px;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 540px) {
+  .layout-section {
+    padding: 1.8rem 1rem 2.2rem 1rem;
+  }
+
+  .layout-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .layout-tabs {
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .tab-btn {
+    font-size: 0.85rem;
+    padding: 0.45rem 0.9rem;
+  }
+
+  .layout-card {
+    padding: 0.6rem;
+    border-radius: 10px;
+    min-height: 280px;
+  }
+
+  .blueprint-img {
+    max-height: 400px;
+  }
+}
