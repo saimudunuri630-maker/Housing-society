@@ -9,20 +9,29 @@ import Fun from './components/Fun';
 import Location from './components/Location';
 import Highlights from './components/Highlights';
 import Login from './components/Login';
+import Enquiry from './components/Enquiry';
 
 function App() {
   return (
     <div className="app">
+      {/* Top Navigation */}
       <Navbar />
-      <Home />
-      <Stats />
-      <About />
-      <Layout />
-      <Status />
-      <Fun />
-      <Location />
-      <Highlights />
-      <Login />
+
+      {/* Main Page Sections */}
+      <main>
+        <Home />
+        <Stats />
+        <About />
+        <Layout />
+        <Status />
+        <Fun />
+        <Location />
+        <Highlights />
+        <Login />
+      </main>
+
+      {/* Persistent floating sticky enquiry tab */}
+      <Enquiry />
     </div>
   );
 }

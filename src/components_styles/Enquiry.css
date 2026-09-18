@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap');
+
+/* Default Desktop: Fixed sticky tab on the right screen edge */
+.floating-enquiry-tab {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  z-index: 9999;
+
+  background-color: #ea580c;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+
+  /* Vertical text flow */
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+
+  padding: 1.3rem 0.55rem;
+  border-radius: 0 6px 6px 0;
+  box-shadow: -3px 0 14px rgba(0, 0, 0, 0.22);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.floating-enquiry-tab:hover {
+  background-color: #d04604;
+  transform: translateY(-50%) rotate(180deg) scale(1.05);
+}
+
+.floating-enquiry-tab:active {
+  transform: translateY(-50%) rotate(180deg) scale(0.97);
+}
+
+/* ==================== RESPONSIVENESS ==================== */
+
+/* Tablet Screens (≤ 880px) */
+@media (max-width: 880px) {
+  .floating-enquiry-tab {
+    top: 52%;
+    font-size: 0.78rem;
+    padding: 1.1rem 0.5rem;
+    letter-spacing: 1.8px;
+  }
+}
+
+/* Mobile Screens (≤ 540px) */
+@media (max-width: 540px) {
+  .floating-enquiry-tab {
+    top: 56%;
+    font-size: 0.72rem;
+    padding: 0.95rem 0.42rem;
+    letter-spacing: 1.4px;
+    border-radius: 0 4px 4px 0;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.28);
+  }
+}
+
+/* Very Small Mobile Screens (≤ 380px) */
+@media (max-width: 380px) {
+  .floating-enquiry-tab {
+    font-size: 0.65rem;
+    padding: 0.85rem 0.38rem;
+    letter-spacing: 1px;
+  }
+}
