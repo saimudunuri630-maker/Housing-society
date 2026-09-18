@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './components/navbar';
+import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Stats from './components/Orange';
 import About from './components/About';
@@ -20,7 +20,7 @@ function App() {
       {/* Main Page Sections */}
       <main>
         <Home />
-        <Stats />
+        <Orange />
         <About />
         <Layout />
         <Status />

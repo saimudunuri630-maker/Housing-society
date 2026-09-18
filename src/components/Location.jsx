@@ -1,5 +1,5 @@
 import React from 'react';
-import '../components_styles/location.css';
+import '../components_styles/Location.css';
 
 const Location = () => {
   const directMapsUrl =

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../components_styles/status.css';
+import '../components_styles/Status.css';
 
 const statusImages = [
   { id: 1, src: '/Images/status.png', alt: 'Project Status View 1' },
